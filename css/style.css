@@ -90,6 +90,7 @@
 body {
     overflow-x: hidden;
     color: #252525;
+    background-color: #ebe8e3;
 }
 .section1 {
     height: 100vh;
@@ -421,14 +422,14 @@ body {
 }
 .section6 {
     background: #ebe8e3;
-    padding: 0 0 20px;
     max-width: 460px;
     margin: 0 auto;
     overflow: hidden;
+    padding-bottom: 70px;
 }
 .section6__wrapper {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0px 15px;
 }
 .section6__image {
     margin-bottom: 70px;
@@ -437,6 +438,7 @@ body {
 .section6__image > img {
     width: 100%;
 }
+
 .section6__thankyou {
     text-align: center;
     margin-bottom: 20px;
@@ -450,14 +452,21 @@ body {
 }
 .section6__map {
     text-align: center;
+    position: relative;
+}
+.section6__map::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(143, 161, 117, 0.75); /* độ trong suốt 50% */
 }
 .section6__map-title {
     color: #2d5432;
     margin-bottom: 20px;
 }
-.section6__map-item {
-    margin-bottom: 40px;
-}
+
 .section6__map-iframe {
     border: 1px solid #2d5432;
     overflow: hidden;
@@ -467,10 +476,28 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.section6__map-time{
+    padding: 30px 0;
+    z-index: 10;
+    position: relative;
+}
 .section6__map-iframe > iframe {
     width: 100%;
     height: 100%;
 }
+.section7 {
+    background: #ebe8e3;
+    padding: 0 0 20px;
+    max-width: 460px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.section7__wrapper {
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 250px;
+}
+
 .footer {
     background: #ebe8e3;
     max-width: 460px;
