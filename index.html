@@ -11,7 +11,7 @@
     />
     <meta
       name="description"
-      content="Trân trọng kính mời bạn đến dự tiệc báo hỷ Văn Hoà & Minh Thư - 22.02.2026"
+      content="Trân trọng kính mời bạn đến dự tiệc Văn Hoà & Minh Thư - 22.02.2026"
     />
     <link rel="stylesheet" href="css/namlinh.css" />
   </head>
@@ -94,13 +94,10 @@
       <div class="nl-container nl-animate">
         <div class="nl-invite">
           <p class="nl-invite__title">Thư Mời</p>
-          <h2 class="nl-invite__heading">
-            THAM DỰ LỄ BÁO HỶ CỦA VĂN HOÀ & MINH THƯ
-          </h2>
+          <h2 class="nl-invite__heading">THAM DỰ LỄ CỦA VĂN HOÀ & MINH THƯ</h2>
           <div class="nl-invite__img">
             <img src="images/section-5/section-5.jpg" alt="" />
           </div>
-          <p class="nl-invite__event">TIỆC BÁO HỶ</p>
           <p class="nl-invite__date">22.02.2026</p>
           <p class="nl-invite__time">CHỦ NHẬT | 17H00</p>
           <p class="nl-invite__cta">XÁC NHẬN THAM DỰ</p>
@@ -255,8 +252,14 @@
           audio.play().catch(function () {});
         }
         playMusic();
-        document.body.addEventListener("touchstart", playMusic, { once: true, passive: true });
-        document.body.addEventListener("touchend", playMusic, { once: true, passive: true });
+        document.body.addEventListener("touchstart", playMusic, {
+          once: true,
+          passive: true,
+        });
+        document.body.addEventListener("touchend", playMusic, {
+          once: true,
+          passive: true,
+        });
       })();
     </script>
   </body>
