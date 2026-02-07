@@ -207,7 +207,12 @@
       (function () {
         var audio = document.getElementById("nl-music");
         if (!audio) return;
-        audio.play().catch(function () {});
+        function playMusic() {
+          audio.play().catch(function () {});
+        }
+        playMusic();
+        document.body.addEventListener("click", playMusic, { once: true });
+        document.body.addEventListener("touchstart", playMusic, { once: true });
       })();
     </script>
   </body>

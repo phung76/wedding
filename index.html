@@ -74,14 +74,14 @@
           <div class="nl-couple__item">
             <p class="nl-couple__role">Chú Rể</p>
             <div class="nl-couple__photo">
-              <img src="images/section-4/BAP0664.jpg" alt="Chú rể" />
+              <img src="images/section-4/chure.jpg" alt="Chú rể" />
             </div>
             <h2 class="nl-couple__name">Văn Hoà</h2>
           </div>
           <div class="nl-couple__item">
             <p class="nl-couple__role">Cô Dâu</p>
             <div class="nl-couple__photo">
-              <img src="images/section-4/3.jpg" alt="Cô dâu" />
+              <img src="images/section-4/codau.jpg" alt="Cô dâu" />
             </div>
             <h2 class="nl-couple__name">Minh Thư</h2>
           </div>
@@ -251,7 +251,12 @@
       (function () {
         var audio = document.getElementById("nl-music");
         if (!audio) return;
-        audio.play().catch(function () {});
+        function playMusic() {
+          audio.play().catch(function () {});
+        }
+        playMusic();
+        document.body.addEventListener("click", playMusic, { once: true });
+        document.body.addEventListener("touchstart", playMusic, { once: true });
       })();
     </script>
   </body>
