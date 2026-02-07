@@ -177,7 +177,7 @@
       <div class="nl-footer__bg" role="presentation">
         <img src="images/section-7/1.jpg" alt="" />
       </div>
-      <div class="nl-footer__inner nl-animate">
+      <div class="nl-footer__inner">
         <p class="nl-footer__text">Rất hân hạnh được đón tiếp!</p>
       </div>
     </footer>
@@ -253,7 +253,12 @@
       (function () {
         var audio = document.getElementById("nl-music");
         if (!audio) return;
-        audio.play().catch(function () {});
+        function startMusic() {
+          audio.play().catch(function () {});
+        }
+        startMusic();
+        document.body.addEventListener("click", startMusic, { once: true });
+        document.body.addEventListener("touchstart", startMusic, { once: true });
       })();
     </script>
   </body>
