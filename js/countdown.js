@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const weddingDateNhaTrai = new Date("2026-02-22T10:00:00");
+  const weddingDateNhaTrai = new Date("2026-02-22T17:00:00");
 
   function updateCountdown(targetDate, elementId) {
     const now = new Date().getTime();
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setInterval(() => {
-    updateCountdown(weddingDateNhaTrai, "timer-nha-trai");
+    // updateCountdown(weddingDateNhaTrai, "timer-nha-trai");
     updateCountdown(weddingDateNhaTrai, "timer-nha-gai");
   }, 1000);
 });
