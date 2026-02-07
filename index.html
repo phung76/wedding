@@ -25,7 +25,6 @@
     >
       <div class="nl-hero__inner">
         <p class="nl-hero__label">SAVE THE DATE</p>
-        <p class="nl-hero__sub">Tiệc Báo Hỷ</p>
         <p class="nl-hero__time">17:00</p>
         <p class="nl-hero__day">CHỦ NHẬT</p>
         <p class="nl-hero__date">22.02</p>
@@ -252,18 +251,7 @@
       (function () {
         var audio = document.getElementById("nl-music");
         if (!audio) return;
-        function startMusic() {
-          audio.play().then(function () { started = true; }).catch(function () {});
-        }
-        var started = false;
-        startMusic();
-        function tryOnce(e) {
-          if (!started) startMusic();
-        }
-        document.body.addEventListener("click", tryOnce, { once: true });
-        document.body.addEventListener("touchstart", tryOnce, { once: true });
-        document.body.addEventListener("scroll", tryOnce, { once: true, passive: true });
-        document.addEventListener("keydown", tryOnce, { once: true });
+        audio.play().catch(function () {});
       })();
     </script>
   </body>
