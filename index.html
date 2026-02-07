@@ -253,11 +253,17 @@
         var audio = document.getElementById("nl-music");
         if (!audio) return;
         function startMusic() {
-          audio.play().catch(function () {});
+          audio.play().then(function () { started = true; }).catch(function () {});
         }
+        var started = false;
         startMusic();
-        document.body.addEventListener("click", startMusic, { once: true });
-        document.body.addEventListener("touchstart", startMusic, { once: true });
+        function tryOnce(e) {
+          if (!started) startMusic();
+        }
+        document.body.addEventListener("click", tryOnce, { once: true });
+        document.body.addEventListener("touchstart", tryOnce, { once: true });
+        document.body.addEventListener("scroll", tryOnce, { once: true, passive: true });
+        document.addEventListener("keydown", tryOnce, { once: true });
       })();
     </script>
   </body>
