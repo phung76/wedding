@@ -1,24 +1,14 @@
 {
-   "rewrites": [
-      {
-         "source": "/",
-         "has": [
-            {
-               "type": "host",
-               "value": "https://wedding-it7v.vercel.app/"
-            }
-         ],
-         "destination": "/index.html"
-      },
-      {
-         "source": "/",
-         "has": [
-            {
-               "type": "host",
-               "value": "wedding-thuandhoa.vercel.app"
-            }
-         ],
-         "destination": "/index-namlinh.html"
-      }
-   ]
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index-namlinh.html",
+      "has": [{ "type": "host", "value": "wedding-thuandhoa.vercel.app" }]
+    },
+    {
+      "source": "/",
+      "destination": "/index.html",
+      "has": [{ "type": "host", "value": "wedding-it7v.vercel.app" }]
+    }
+  ]
 }
