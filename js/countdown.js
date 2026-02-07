@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setInterval(() => {
-    // updateCountdown(weddingDateNhaTrai, "timer-nha-trai");
-    updateCountdown(weddingDateNhaTrai, "timer-nha-gai");
+    updateCountdown(weddingDateNhaTrai, "timer-nha-trai");
   }, 1000);
 });
