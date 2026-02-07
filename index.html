@@ -255,8 +255,8 @@
           audio.play().catch(function () {});
         }
         playMusic();
-        document.body.addEventListener("click", playMusic, { once: true });
-        document.body.addEventListener("touchstart", playMusic, { once: true });
+        document.body.addEventListener("touchstart", playMusic, { once: true, passive: true });
+        document.body.addEventListener("touchend", playMusic, { once: true, passive: true });
       })();
     </script>
   </body>
